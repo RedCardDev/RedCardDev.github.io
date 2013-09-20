@@ -159,6 +159,17 @@ ul.posts span {
   background-color: #333;
 }
 
+/** customizes */
+.post {
+  clear: both; 
+  padding-top: 50px;
+}
+
 .post img {
   width: 300px;
+}
+
+.author {
+  margin-right: 50px;
+  float: left;
 }

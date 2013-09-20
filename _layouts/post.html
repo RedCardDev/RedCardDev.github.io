@@ -3,9 +3,18 @@ layout: default
 ---
 <h2>{{ page.title }}</h2>
 <p class="meta">
-    <img src="http://www.gravatar.com/avatar/{{ page.post_gravatar }}?s=40"><br />
-    <span class="author">{{ page.post_author }}</span><br />
-    {{ page.date | date_to_string }}
+    {% for author in page.authors do %}
+    <div class="author">
+        <img src="http://www.gravatar.com/avatar/{{ author.gravatar }}?s=40"><br />
+        <span class="name">{{ author.name }}</span><br />
+        <span class="github">
+            <a href="http://github.com/{{ author.github }}">
+                http://github.com/{{ author.github }}
+            </a>
+        </span><br />
+        {{ page.date | date_to_string }}
+    </div>
+    {% endfor %}
 </p>
 
 <div class="post">

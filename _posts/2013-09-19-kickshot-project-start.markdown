@@ -4,8 +4,12 @@ title:  "Starting KickShot for Android Development!"
 date:   2013-09-19 16:13:07
 categories: jekyll update
 
-post_author: Nicholas Otter
-post_gravatar: e893c15695d7d0e39e09d1462129edb6
+authors:
+    - name: Nicholas Otter
+      gravatar: e893c15695d7d0e39e09d1462129edb6
+      github: otternq
+    - name: Jordan Leithart
+      github: leit7193
 ---
 
 A little introduction
