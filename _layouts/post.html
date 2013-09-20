@@ -2,13 +2,13 @@
 layout: default
 ---
 <h2>{{ page.title }}</h2>
-<p class="meta">{{ page.date | date_to_string }}</p>
+<p class="meta">
+    <img src="http://www.gravatar.com/avatar/{{ page.post_gravatar }}?s=40"><br />
+    <span class="author">{{ page.post_author }}</span><br />
+    {{ page.date | date_to_string }}
+</p>
 
 <div class="post">
-    <div class="meta">
-        <img src="http://www.gravatar.com/avatar/{{ page.post_gravatar }}?s=40">
-        <span class="author">{{ page.post_author }}</span>
-    </div>
 {{ content }}
 </div>
 
