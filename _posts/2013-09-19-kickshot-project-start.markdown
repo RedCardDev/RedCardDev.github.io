@@ -15,20 +15,20 @@ authors:
 A little introduction
 ------
 
-We (Nick and Jordan) are two University of Idaho, Computer Science Seniors who are working on a Senior Capstone Project. This project is for a local (Moscow, ID) board game call KickShot (created by Aziz Makhani) whos goal is to educate its players on the rules and procedures of soccar while still being engadging and entertaining. Our goal for the semester is to publish the Junior version of KickShot to the Google Play Store.
+We (Nick and Jordan) are two University of Idaho, Computer Science Seniors who are working on a Senior Capstone Project. This project is for a local (Moscow, ID) board game call KickShot (created by Aziz Makhani) the goal of which is to educate its players on the rules and procedures of soccer while still being engaging and entertaining. Our goal for the semester is to publish the Junior version of KickShot to the Google Play Store.
 
-Nick's First Week of Development
+Nick's First Week of Developments
 ------
 After meeting with Aziz for our first customer meeting, I was rather excited about working on an Android Game. This is not my first Android application but it is my first Android Game and as such there are a number of problems/tasks that I had not looked into before. 
 
-The first of these was how to display and move objects on the screen based on user intraction. My previous applications have all leaned towards data entry and management and didn't require any custom views (the basic views provided by Android had always worked fine for my projects), so I went home and started trying different solutions to manipulate a ball on a soccar board. What I ended up with was a prototype game board constructed as a custom Android view that rendered the position ball chip as a Bitmap within the view.
+The first of these was how to display and move objects on the screen based on user interaction. My previous applications have all leaned towards data entry and management and didn't require any custom views (the basic views provided by Android had always worked fine for my projects), so I went home and started trying different solutions to manipulate a ball on a soccer board. What I ended up with was a prototype game board constructed as a custom Android view that rendered the position ball chip as a Bitmap within the view.
 
 ![Prototype 1 - Home][1]
 ![Prototype 1 - Away][2]
 
-Working off that prototype I began to add other game board requirements such as a dice and the ability for the ball chip to change which image is loaded based on which playe has possesion of the ball.
+Working off that prototype I began to add other game board requirements such as a dice and the ability for the ball chip to change which image is loaded based on which player has possession of the ball.
 
-My board class ended up looking like (sudo code):
+My board class ended up looking like (pseudo-code):
 
 ```
 class Board extends Android.View:
@@ -40,7 +40,7 @@ class Board extends Android.View:
 
 ```
 
-There was very little condition checking, if someone roled a 4 and there were only 2 spaces left on the board then the ball chip moved off screen and the chip wasn't moving on the soccar field lines, but it was a start.
+There was very little condition checking, if someone rolled a 4 and there were only 2 spaces left on the board then the ball chip moved off screen and the chip wasn't moving on the soccer field lines, but it was a start.
 
 Jordan's First Week of Development
 -----
