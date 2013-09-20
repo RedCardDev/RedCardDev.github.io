@@ -19,6 +19,9 @@ After meeting with Aziz for our first customer meeting, I was rather excited abo
 
 The first of these was how to display and move objects on the screen based on user intraction. My previous applications have all leaned towards data entry and management and didn't require any custom views (the basic views provided by Android had always worked fine for my projects), so I went home and started trying different solutions to manipulate a ball on a soccar board. What I ended up with was a prototype game board constructed as a custom Android view that rendered the position ball chip as a Bitmap within the view.
 
+![Prototype 1 - Home][1]
+![Prototype 1 - Away][2]
+
 Working off that prototype I began to add other game board requirements such as a dice and the ability for the ball chip to change which image is loaded based on which playe has possesion of the ball.
 
 My board class ended up looking like (sudo code):
@@ -61,4 +64,7 @@ Moving Forward
 ------
 
 Our next step is to start unit testing our Board view (trying to start testing early) and to start on our documentation.
+
+[1]: /images/screenshots/Screenshot_2013-09-14-prototype1-home.png "Prototype 1 - Home"
+[2]: /images/screenshots/Screenshot_2013-09-14-prototype1-away.png "Prototype 1 - Away"
 
