@@ -2,7 +2,6 @@
 layout: post
 title:  "Starting KickShot for Android Development!"
 date:   2013-09-19 16:13:07
-categories: jekyll update
 
 authors:
     - name: Nicholas Otter

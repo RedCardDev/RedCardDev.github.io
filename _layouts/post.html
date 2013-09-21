@@ -22,6 +22,12 @@ layout: default
 </div>
 
 <div class="general">
+    <br /><br />
     <h3>General</h3>
-    You can find KickShot the board game at <a href="//kickshot.org">KickShot.org</a>
+    <ul>
+        {% for item in page.general do %}
+            <li>The {{item.name}} can be found <a href="{{item.link}}">Here</a></li>
+        {% endfor %}
+        <li>You can find KickShot the board game at <a href="//kickshot.org">KickShot.org</a></li>
+    </ul>
 </div>
