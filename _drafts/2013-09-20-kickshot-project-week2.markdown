@@ -32,3 +32,10 @@ With a quick change the the Board view I should be able to return which line the
 
 Something that I wanted to try this time around is to have the testing code and the source code in the same project/repository. For previous projects the testing code ended up in its own Eclipse project and as a result in its own git repo. This lead to having to check multiple issue lists and confusion about where bugs should be logged. Android documentation, and the use of Eclipse make using separate Eclipse projects for the Application and the Application's tests, so I created a _tests_ folder in the Application's Eclipse project and then created an Android Testing Project and set its path to _/workspace/KickShot/tests_ so now I have the best of Eclipse's multiple projects and a single git repository.
 
+As stated above, my first test will be the Board View. Initially I thought that I would be required to test it through an Android activity but Android provides mock context's in their `AndroidTestCase` class so I am able to run tests on the view without initializing an activity. I started with tests that would force the changes requested in [Issue #7](https://github.com/RedCardDev/KickShotAndroid/issues/7). The execution can be seen below. Within those tests I also check to make sure that the ball cannot be moved past the goal line and the `ballTowardsX` functions return the line that the ball ends up on so that the game activity can handle shot logic.
+
+![Test Execution][1]
+
+
+[1]: /images/screenshots/Screenshot_2013-09-20-ball-tests.png "Ball Tests"
+
