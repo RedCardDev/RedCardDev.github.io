@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "KickShot / Week 2 - Unit Testing"
-date:   2013-09-20 15:20:00
+date:   2013-09-22 15:20:00
 
 authors:
     - name: Nicholas Otter
@@ -22,19 +22,52 @@ In my last post I talked about never having written a custom view, and with the 
 - [Robotium](https://code.google.com/p/robotium/) | Unit testing for Android functionality, allowing the tests of clicks
 - [Spoon](http://square.github.io/spoon/) | Multi-device test runner
 
-I figure that Robotium is a good place to start for testing click events on the Custom View because it can trigger events such as OnClick based on its resource id.
-
-`solo.clickOnView(solo.getView(android.R.id.home));`
-
-With a quick change the the Board view I should be able to return which line the ball is currently on and pass that value onto Android JUnit.
-
-`board.ballGetCurrentLine()`
+I figure those tools are a good place to start testing _KickShot for Android_.
 
 Something that I wanted to try this time around is to have the testing code and the source code in the same project/repository. For previous projects the testing code ended up in its own Eclipse project and as a result in its own git repo. This lead to having to check multiple issue lists and confusion about where bugs should be logged. Android documentation, and the use of Eclipse make using separate Eclipse projects for the Application and the Application's tests, so I created a _tests_ folder in the Application's Eclipse project and then created an Android Testing Project and set its path to _/workspace/KickShot/tests_ so now I have the best of Eclipse's multiple projects and a single git repository.
 
 As stated above, my first test will be the Board View. Initially I thought that I would be required to test it through an Android activity but Android provides mock context's in their `AndroidTestCase` class so I am able to run tests on the view without initializing an activity. I started with tests that would force the changes requested in [Issue #7](https://github.com/RedCardDev/KickShotAndroid/issues/7). The execution can be seen below. Within those tests I also check to make sure that the ball cannot be moved past the goal line and the `ballTowardsX` functions return the line that the ball ends up on so that the game activity can handle shot logic.
 
 ![Test Execution][1]
+
+The Test Case ended up looking like:
+
+```java
+
+class BoardViewTest extends AndroidTestCase
+- private Board board;
+- public BoardViewTest
+- protected void setUp
+- public void testBallTowardsAway
+- public void testBallTowardsHome
+- public void testBallPosession
+- public void testDicePositionAway
+- public void testDicePositionHome
+- public void testDiceChangeFace
+
+
+```
+
+with the tests written I changed the Board API to the following. Then I was able to change the internals of the Board class while not ruining its usage in the LevelOne Activity.
+
+```java
+
+class Board extends Android.View
+- public Board(Context context, AttributeSet attrs)
+- public boolean onTouchEvent(MotionEvent event)
+- public Boolean ballPosession(int playerTurn)
+- public Boolean diceChangeFace(int dice, int diceFace)
+- public Boolean dicePositionHome(int dice)
+- public Boolean dicePositionAway(int dice)
+- public int ballTowardsAway(int steps)
+- public int ballTowardsHome(int steps)
+- private int ballMove()
+- private void init()
+- protected void onDraw(Canvas canvas)
+
+
+```
+
 
 
 [1]: /images/screenshots/Screenshot_2013-09-20-ball-tests.png "Ball Tests"
