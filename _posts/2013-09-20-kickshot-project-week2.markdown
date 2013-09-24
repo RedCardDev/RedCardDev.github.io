@@ -30,7 +30,7 @@ This lead to having to check multiple issue lists and confusion about where bugs
 
 Android documentation recomends using separate Eclipse projects for the Application 
 and the Application's tests, but also show how to store the Application Test project withint the primary
-Applications file structure. Following their instructions, I created a _tests_ folder in the _KickShot) Eclipse project and 
+Applications file structure. Following their instructions, I created a _tests_ folder in the _KickShot_ Eclipse project and 
 then created an Android Testing Project and set its path to _/workspace/KickShot/tests_ so now I have the 
 best of Eclipse's multiple projects and a single git repository.
 
