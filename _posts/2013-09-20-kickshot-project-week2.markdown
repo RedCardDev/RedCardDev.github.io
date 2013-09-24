@@ -22,7 +22,7 @@ In my last post I talked about never having written a custom view, and with the 
 - [Robotium](https://code.google.com/p/robotium/) | Unit testing for Android functionality, allowing the tests of clicks
 - [Spoon](http://square.github.io/spoon/) | Multi-device test runner
 
-I think those tools are a good place to start testing _KickShot for Android_.
+These tools seem to be a good place to start testing _KickShot for Android_.
 
 Something I wanted to try this time around is to have the testing code and the source code in the same project/repository. 
 For previous projects the testing code ended up in its own Eclipse project and as a result in its own git repo. 
