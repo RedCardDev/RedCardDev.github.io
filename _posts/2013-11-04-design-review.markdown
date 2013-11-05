@@ -17,5 +17,5 @@ Design Review
 Tomorrow (Tuesday November 3rd) Jordan and I will present our work-to-date to our advising professors, and the other
  computer science capstone students.
  
- [Here](https://docs.google.com/presentation/d/1vOH2qJF_3gAhPAa45RyhjiRIb864Iqk20GsnwVrW0Kw/edit?usp=sharing) is our [Slideshow Presentation](https://docs.google.com/presentation/d/1vOH2qJF_3gAhPAa45RyhjiRIb864Iqk20GsnwVrW0Kw/edit?usp=sharing)
+Here is our [Slideshow Presentation](https://docs.google.com/presentation/d/1vOH2qJF_3gAhPAa45RyhjiRIb864Iqk20GsnwVrW0Kw/edit?usp=sharing)
 
